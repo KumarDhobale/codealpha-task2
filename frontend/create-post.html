@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Post</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav>
+        <div class="logo">My Social App</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" id="logoutBtn" style="display:none;">Log Out</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Create a New Post</h1>
+        <form id="createPostForm" class="create-post-form">
+            
+            <label for="postImage" class="file-label">
+                <i class="fas fa-camera"></i>
+                <span>Choose Photo</span>
+            </label>
+            <input type="file" id="postImage" name="image" accept="image/*" style="display:none;">
+
+            <textarea id="postText" name="text" rows="4" placeholder="What's on your mind?" required></textarea>
+
+            <button type="submit">Submit Post</button>
+        </form>
+        <div id="apiResponse"></div>
+    </div>
+
+    <script src="create-post-script.js"></script>
+</body>
+</html>
